@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 class Child extends Component {
     constructor(props) {
         super(props);
@@ -5,7 +6,11 @@ class Child extends Component {
     }
     render() { 
         return ( <section>
-            <p>Child</p>
+            {
+                this.props.energyLevel === 2 ? 
+                <p>Energy: Low</p> 
+                : <p>Energy: Over 9000</p>
+            }
         </section> );
     }
 }
